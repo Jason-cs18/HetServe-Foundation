@@ -1,35 +1,36 @@
-# HetServe-LLMs
-> [A Overview of Efficiently Serving Large Language Models across Edge Devices [arXiv] (TBD)]()
+# HetServe-Foundation
+> [A Overview of Efficiently Serving Foundation Models across Edge Devices [arXiv] (TBD)]()
 
 ## What is This Overview About? 
-Large language models (LLMs) have achieved impressive results across various tasks. However, their resource-intensive nature poses challenges for efficient deployment. In our overview, we explore serving LLMs on distributed edge devices, addressing scalability and latency concerns.
+Foundation models (e.g., large language models and diffusion models) have achieved impressive results across various tasks. However, their resource-intensive nature poses challenges for efficient deployment. In our overview, we explore serving them on distributed edge devices, addressing scalability and latency concerns.
 
-## Why Efficiently Serving LLMs over Distributed Heterogeneous Devices is Needed?
-Efficiently serving LLMs over distributed heterogeneous devices is necessary to provide a seamless user experience with low latency. It enables scalability by leveraging resources from multiple devices, optimizing load balancing and resource utilization. This approach helps manage network congestion by distributing the delivery load across different devices. With the diverse range of device types available, efficient serving ensures that each device receives an optimized stream tailored to its capabilities. Overall, efficiently serving LLMs over distributed heterogeneous devices improves user experience, scalability, network performance, and accommodates the growing variety of devices in use.
+## Why Efficiently Serving Foundation Models over Distributed Heterogeneous Devices is Needed?
+Efficiently serving foundation models over distributed heterogeneous devices is necessary to provide a seamless user experience with low latency. It enables scalability by leveraging resources from multiple devices, optimizing load balancing and resource utilization. This approach helps manage network congestion by distributing the delivery load across different devices. With the diverse range of device types available, efficient serving ensures that each device receives an optimized stream tailored to its capabilities. Overall, efficiently serving LLMs over distributed heterogeneous devices improves user experience, scalability, network performance, and accommodates the growing variety of devices in use.
 
 ## Table of Contents
-- [LLM Serving Survey](#LLM-Serving-Survey)
 - [LLM Serving](#LLM-Serving)
-  - [Background](#Background)
-  - [Serving Metrics](#Serving-Metrics)
-  - [Latency-oriented Optimizations](#Latency-oriented-Optimizations)
+- - [LLM Serving Survey](#LLM-Serving-Survey)
+  - [LLM Background](#Background)
+  - [Serving Metrics for LLMs](#Serving-Metrics)
+  - [Latency-oriented Optimizations for LLMs](#Latency-oriented-Optimizations)
     - [Efficient Models](#Efficient-Models)
     - [Efficient Operators/Kernels](#Efficient-Operators/Kernels)
     - [Quantization](#Quantization)
-  - [Throughput-oriented Optimizations](#Throughput-oriented-Optimizations)
+  - [Throughput-oriented Optimizations for LLMs](#Throughput-oriented-Optimizations)
     - [Resource Management](#Resource-Management)
     - [Parallelism](#Parallelism)
   - [Open-source LLM Serving Systems](#Open-source-LLM-Serving-Systems)
+- [Diffusion Serving](#Diffusion-Serving)
+  - [Diffusion Serving Survey]()
+  - [Diffusion Background]()
+  - [Serving Metrics for Diffusion]()
+  - [Latency-oriented Optimizations for Diffusion]()
+  - [Throughput-oriented Optimizations for Diffusion]()
+  - [Open-source Diffusion Serving Systems]()
 - [Serving on Heterogeneous Devices](#Serving-on-Heterogeneous-Devices)
   - [A Single Device](#A-Single-Device)
   - [Scaling to Distributed Devices](#Scaling-to-Distributed-Devices)
 - [Other List](#Other-List)
-
-## LLM Serving Survey
-- [arXiv 2023.02] [Full Stack Optimization of Transformer Inference: a Survey](https://arxiv.org/abs/2302.14017) | UC Berkeley
-- [arXiv 2023.12] [Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems](https://arxiv.org/pdf/2312.15234) | Carnegie Mellon University
-- [TMLR 2024] [Efficient Large Language Models: A Survey](https://github.com/AIoT-MLSys-Lab/Efficient-LLMs-Survey), The Ohio State University
-- [arXiv 2024.04] [A Survey on Efficient Inference for Large Language Models](https://arxiv.org/abs/2404.14294), Infinigence-AI and Tsinghua University
 
 ## LLM Serving
 
@@ -39,6 +40,12 @@ Efficiently serving LLMs over distributed heterogeneous devices is necessary to 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/AAQtmjCc74AzI4S2pibIpCrWfDWiaBeFZOibkVAQgVwI2m6IicEdEjHgPHTwR6aGclubTx9MRFVFoYSjObI9QgvQzA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
 *Image source: [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://dl.acm.org/doi/abs/10.1145/3600006.3613165)*
+
+### LLM Serving Survey
+- [arXiv 2023.02] [Full Stack Optimization of Transformer Inference: a Survey](https://arxiv.org/abs/2302.14017) | UC Berkeley
+- [arXiv 2023.12] [Towards Efficient Generative Large Language Model Serving: A Survey from Algorithms to Systems](https://arxiv.org/pdf/2312.15234) | Carnegie Mellon University
+- [TMLR 2024] [Efficient Large Language Models: A Survey](https://github.com/AIoT-MLSys-Lab/Efficient-LLMs-Survey), The Ohio State University
+- [arXiv 2024.04] [A Survey on Efficient Inference for Large Language Models](https://arxiv.org/abs/2404.14294), Infinigence-AI and Tsinghua University
 
 ### Background
 - [NeurIPS 2017] [Attention is all you need](https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf) | Google Brain
@@ -158,3 +165,4 @@ Efficiently serving LLMs over distributed heterogeneous devices is necessary to 
 - [Efficient Large Language Model (LLM) Inferencing on GPUs](https://github.com/yinuotxie/Efficient-LLM-Inferencing-on-GPUs?tab=readme-ov-file)
 - [Numbers every LLM Developer should know](https://github.com/ray-project/llm-numbers)
 - [Tensor Parallelism and Sequence Parallelism: Detailed Analysis](https://insujang.github.io/2024-01-11/tensor-parallelism-and-sequence-parallelism-detailed-analysis/)
+- [Efficient Diffusion Models: A Survey](https://github.com/AIoT-MLSys-Lab/Efficient-Diffusion-Model-Survey)
